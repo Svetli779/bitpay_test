@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<script type="text/javascript" src="libs/angular.min.js"></script>
+	<script type="text/javascript" src="libs/angular-route.js"></script>
+	<script type="text/javascript" src="libs/restangular.js"></script>
+	<script type="text/javascript" src="libs/lodash.js"></script>
+	<script type="text/javascript" src="libs/moment.js"></script>
+	<script type="text/javascript" src="libs/angular-timer.js"></script>
+	<script type="text/javascript" src="libs/humanize-duration.js"></script>
+	<script type="text/javascript" src="app.js"></script>
+	<script type="text/javascript" src="services/userService.js"></script>
+	<script type="text/javascript" src="services/productService.js"></script>
+	<script type="text/javascript" src="services/multypartService.js"></script>
+	<script type="text/javascript" src="controllers/homeController.js"></script>
+	<script type="text/javascript" src="controllers/registerController.js"></script>
+	<script type="text/javascript" src="controllers/loginController.js"></script>
+	<script type="text/javascript" src="controllers/accountController.js"></script>
+	<script type="text/javascript" src="controllers/cartController.js"></script>
+	<script type="text/javascript" src="directives/profile.js"></script>
+	<script type="text/javascript" src="directives/fileModel.js"></script>
+	<style type="text/css">
+		.error{
+			color: rgba(255, 0, 0, 1);
+		}
+		.success{
+			color: rgba(0, 255, 0, 1);
+		}
+		.promo{
+			color: rgba(255, 0, 0, 1);
+		}
+		.oldPrice{
+			text-decoration: line-through;
+		}
+		.bit{
+			margin : 25px;
+			padding: 25px;
+			background: lightgreen;
+		}
+		img{
+			width: 250px;
+			height: 250px;
+		}
+	</style>
+	<title></title>
+</head>
+<body>
+	<div><a href="#/">Home</a></div>
+	<div><a href="#/cart">Cart</a></div>
+	<div profile></div>
+	<div ng-view></div>
+</body>
+</html>

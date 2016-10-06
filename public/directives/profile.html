@@ -1,0 +1,9 @@
+<div ng-if="currentUser">
+	Welcome {{ currentUser }}
+	<button ng-click="logout()">Logout</button><br>
+	<a href="#/account">Change your account</a>
+</div>
+<div ng-if="!currentUser">
+	<a href="#/login">Login</a>
+	<a href="#/register">Register</a>
+</div>

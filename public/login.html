@@ -1,0 +1,7 @@
+<fieldset>
+    <legend>Login</legend>
+    <input type="text" name="username" placeholder="User Name" autofocus="true" ng-model="loginUsername"><br><br>
+    <input type="password" name="password" placeholder="Password" ng-model="loginPassword"><br><br>
+    <button ng-click="userLogin()">Login</button>
+</fieldset>
+<div ng-class="{ 'error' : error , 'success' : success }">{{ response }}</div>

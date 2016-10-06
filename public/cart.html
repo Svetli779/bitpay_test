@@ -1,0 +1,20 @@
+<div ng-repeat="item in cart">
+    <div>
+        <img ng-src="{{ item.product.picture }}">
+        <p>Kind: {{ item.product.kind }}</p>
+        <p>Name: {{ item.product.name }}</p>
+        <div ng-if="item.product.promotion==0">
+            <p>Price: {{ item.product.price | number:2 }}</p>
+            <p>Total price {{ item.qty * item.product.price | number:2}}</p>
+        </div>
+        <div ng-if="item.product.promotion==1">
+            <p>Price: {{ item.product.promo_price | number:2 }}</p>
+            <p>Total price {{ item.qty * item.product.promo_price | number:2}}</p>
+        </div>
+        <input type="number" name="number" ng-model="item.qty">
+        <br>
+        <button ng-click="updateProduct(item.qty,item.product._id)">Update</button>
+        <button ng-click="deleteProduct(item.product._id)">Remove Item</button>
+    </div>
+    <hr>
+</div>

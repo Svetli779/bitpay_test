@@ -1,0 +1,7 @@
+<fieldset>
+    <legend>Create user</legend>
+    <input type="text" name="username" placeholder="User Name" autofocus="true" ng-model="username"><br><br>
+    <input type="password" name="password" placeholder="Password" ng-model="password"><br><br>
+    <button ng-click="userRegister()">Create user</button>
+</fieldset>
+<div ng-class="{ 'error' : error , 'success' : success }">{{ response }}</div>

@@ -1,0 +1,43 @@
+<form method="POST" enctype="multipart/form-data">
+	<input type="file" 
+	file-model="files" multiple>
+	<button type="submit" ng-click="Submit()">upload</button>
+</form>
+<p ng-repeat="file in files">
+	{{file.name}}
+</p>
+<div class="bit">
+	<button ng-click="openBitcoin()">
+		get BITPAY
+	</button>
+</div>
+
+<!--<div ng-repeat="product in products">
+	<div>
+		<img ng-src="{{ product.picture }}">
+		<p>{{ product.kind }}</p>
+		<p>{{ product.name }}</p>
+		<div ng-if="product.promotion==1">
+			<span>ELAPSED TIME:&nbsp;</span>
+			<timer end-time="product.promo_date">{{days}} days, {{hours}} hours, {{minutes}} minutes, {{seconds}} seconds.</timer><br><br>
+			<span class="oldPrice">
+				Old price: {{ product.price | number:2 }} &nbsp;
+			</span>
+			<span class="discount">
+				Buy now and take {{ product.discount }}% discount !
+			</span>
+			<h3 class="promo"> 
+				Promotional price: &nbsp;{{ product.promo_price | number:2 }} 
+			</h3>	
+		</div>
+		<div ng-if="product.promotion==0">
+			<p>
+				Price: &nbsp;{{ product.price | number:2 }}
+			</p>
+		</div>
+		<input type="number" name="number" ng-model="qty"><br><br>
+		<button ng-click="buy(product._id,qty)">Buy</button>
+	</div>
+	<hr>
+</div>
+-->

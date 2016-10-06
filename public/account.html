@@ -1,0 +1,11 @@
+<div>
+	<fieldset>
+		<legend>Change your account setings</legend>
+			<label>Username:</label>
+			<input type="text" name="username" ng-model="changeUsername"><br><br>
+			<label>Password:</label>
+			<input type="password" name="password" ng-model="changePassword"><br><br>
+		<button ng-click="changeAccount()">Make changes</button>
+	</fieldset>
+	<div ng-class="{ 'error' : error, 'success' : success }">{{ response }}</div>
+</div>
