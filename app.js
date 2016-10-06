@@ -6,7 +6,7 @@ var upload = multer({dest:'public/uploads'})
 var session = require('express-session');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-var port = 3000;
+var port = 5000;
 
 //mongoose.connect('mongodb://localhost/users');
 
