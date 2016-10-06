@@ -24,7 +24,12 @@ app.use(function(req,res,next){
 	res.header("Access-Control-Allow-Origin", "*");
 	res.header("Access-Control-Allow-Headers", "origin, content-type, accept");
 	next()
-})
+});
+
+app.get('/favicon.ico', function(req, res) {
+    res.send(200);
+});
+
 var indexEndpoint = require("./routes/indexEndpoint");
 app.use("/", indexEndpoint);
 
