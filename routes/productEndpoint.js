@@ -88,18 +88,18 @@ router.get('/bit',function(req,res) {
 	}
 	client.createInvoice(options, function(err, invoice) { 
 		if(err){
-			console.log(err);
+			//console.log(err);
 			return res.status(400).send(err);
 		}
-		console.log(invoice);
+		//console.log(invoice);
 		url = invoice.url;
 		id  = invoice.id;
 
 		client.getInvoice(id, function(err, result) {
-		  	console.log(result);
+		  	res.json(result);
 		});
 
-	  	res.json(invoice.url);
+	  	//res.json(invoice.url);
 	});
 });
 

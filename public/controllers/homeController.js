@@ -4,7 +4,9 @@ angular.module('myApp').controller('homeController',
 		$scope.openBitcoin = function() {
 			
 			productService.getBit().then(function(data) {
-				$window.open(data,'_blank');
+				//$window.open(data,'_blank');
+				console.log(data)
+				$scope.data = data;
 			});
 		}
 
