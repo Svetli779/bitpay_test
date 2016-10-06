@@ -53,5 +53,5 @@ app.use("/upload",uploadEndpoint);
 
 
 
-app.listen(port);
+app.listen(process.env.PORT || port);
 console.log('server working');
